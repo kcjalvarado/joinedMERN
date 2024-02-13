@@ -2,7 +2,9 @@ version: "3"
 
 services:
   client:
-    build: ./client
+    build: 
+      context: client
+      target: development
     container_name: react_ui
     ports:
       - "3000:3000"
@@ -24,4 +26,3 @@ services:
 
 networks:
   mern-network:
-    driver: bridge
