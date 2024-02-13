@@ -65,7 +65,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8080/getProducts')
+        fetch('http://node-api:8080/getProducts')
             .then(response => response.json())
             .then(data => {
                 // Initialize checkedItems object with false values for each product
@@ -160,7 +160,7 @@ const Home = () => {
             costo: totalCostProductos+totalCostServicios
           };
 
-        fetch('http://localhost:8080/submit-data', {
+        fetch('http://node-api:8080/submit-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
