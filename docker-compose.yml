@@ -2,9 +2,7 @@ version: "3"
 
 services:
   client:
-    build: 
-      context: client
-      target: development
+    build: ./client
     container_name: react_ui
     ports:
       - "3000:3000"
@@ -12,7 +10,7 @@ services:
     tty: true
     depends_on:
       - server
-    mern-network:
+    networks:
       - mern-network
 
   server: 
@@ -21,7 +19,7 @@ services:
     restart: always
     ports:
       - "8080/8080"
-    mern-network:
+    networks:
       - mern-network
 
 networks:
