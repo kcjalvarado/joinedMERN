@@ -165,7 +165,7 @@ const Home = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dataObject) // Replace with your data object
+            body: JSON.stringify(dataObject)
         })
             .then(response => {
                 if (response.ok) {
